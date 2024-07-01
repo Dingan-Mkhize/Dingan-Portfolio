@@ -21,7 +21,7 @@ export default function Intro() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: "tween",
-              duration: 0.2,
+              duration: 0.6,
             }}
           >
             <Image
@@ -42,7 +42,7 @@ export default function Intro() {
             transition={{
               type: "spring",
               stiffness: 125,
-              delay: 0.1,
+              delay: 0.3,
               duration: 0.7,
             }}
           >
@@ -56,7 +56,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Dingan.</span> I&apos;m a{" "}
+        <span className="font-bold">Hello, I'm Dingan.</span> I'm a{" "}
         <span className="font-bold">full-stack developer</span> passionate about{" "}
         <span className="italic">creativity</span> and building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
@@ -67,7 +67,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.1,
+          delay: 0.3,
         }}
       >
         <Link

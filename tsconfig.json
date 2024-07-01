@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // This line sets the base directory for non-relative paths
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -20,9 +21,16 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/actions/*": ["actions/*"],
+      "@/app/*": ["app/*"],
+      "@/components/*": ["components/*"],
+      "@/context/*": ["context/*"],
+      "@/email/*": ["email/*"],
+      "@/lib/*": ["lib/*"],
+      "@/public/*": ["public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
+
