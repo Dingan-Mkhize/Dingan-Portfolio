@@ -2,9 +2,11 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import bookappImg from "@/public/book-app.png";
+import bikeraceappImg from "@/public/bike-race-app.png";
+import fitnessappImg from "@/public/fitness-app.png";
+import jscalculatorImg from "@/public/js-calculator.png";
+import volunteerappImg from "@/public/volunteer-app.png";
 
 export const links = [
   {
@@ -62,26 +64,40 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    title: "Vanilla JS Calculator",
+    description: 
+      "A functional calculator with basic arithmetic operations and a sleek interface, built with Vanilla JavaScript and CSS.",
+    tags: ["JavaScript", "CSS", "HTML"],
+    imageUrl: jscalculatorImg
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    title: "Book Logger",
+    description: 
+      "An app for book enthusiasts to log and track their reading progress. Built with React for easy book management.",
+    tags: ["React", "JavaScript", "CSS", "HTML"],
+    imageUrl: bookappImg
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    title: "Fitness Progress Tracker",
+    description: 
+      "Track and log fitness activities with a dynamic interface. Built with React and Ruby on Rails, styled with Tailwind CSS.",
+    tags: ["React", "Ruby on Rails", "Devise API", "Tailwind CSS", "JavaScript", "Full-Stack"],
+    imageUrl: fitnessappImg
   },
+  {
+    title: "Colorado Mountain Bike Race Portal",
+    description: 
+      "A full-stack website for a mountain bike race. Integrates Flickr API for photos and uses Ruby on Rails for backend.",
+    tags: ["React", "Ruby on Rails", "Flickr API", "Tailwind CSS", "JavaScript", "Full-Stack"],
+    imageUrl: bikeraceappImg
+  },
+  {
+    title: "Community Volunteer Hub",
+    description: 
+      "A platform for community volunteers. Features live messaging and interactive maps. Built with React and Rails.",
+    tags: ["React", "React Query", "Ruby on Rails", "Devise", "Tailwind CSS", "JavaScript"],
+    imageUrl: volunteerappImg
+  }
 ] as const;
 
 export const skillsData = [
