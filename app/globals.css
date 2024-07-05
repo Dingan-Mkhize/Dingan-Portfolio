@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-    --line-color: #e5e7eb;
+    --line-color: #3636e7;
   }
   
   html.dark {
@@ -19,12 +19,11 @@ html {
 
     background: #e5e7eb !important;
 
-}
+  }
 
 
+  .dark .vertical-timeline::before {
 
-.dark .vertical-timeline::before {
-
-    background: rgba(255, 255, 255, 0.2) !important;
+      background: rgba(255, 255, 255, 0.2) !important;
 
 }

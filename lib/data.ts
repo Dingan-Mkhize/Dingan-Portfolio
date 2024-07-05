@@ -1,7 +1,5 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { FaGitAlt, FaLightbulb, FaPython, FaGraduationCap } from "react-icons/fa";
 import bookappImg from "@/public/book-app.png";
 import bikeraceappImg from "@/public/bike-race-app.png";
 import fitnessappImg from "@/public/fitness-app.png";
@@ -26,7 +24,7 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
+    name: "Journey",
     hash: "#experience",
   },
   {
@@ -37,28 +35,36 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated from OpenClassrooms",
+    location: "Online",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "Graduated as a Full Stack Developer with a strong focus on React and Ruby on Rails. I completed intensive hands-on projects and real-world simulations to enhance my coding and software development skills.",
+    icon: React.createElement(FaGraduationCap),
+    date: "May 2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Python Programming Course",
+    location: "Udemy - Online",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Currently enhancing my programming skills through a comprehensive Python course on Udemy, focusing on practical applications and real-world problem-solving techniques.",
+    icon: React.createElement(FaPython), // Consider changing to a more relevant icon if available
+    date: "May 2024",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Advanced Git and GitHub",
+    location: "Udemy - Online",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Expanding my version control expertise by mastering advanced Git and GitHub techniques, essential for efficient collaboration and code management in software development.",
+    icon: React.createElement(FaGitAlt), // Consider changing to a more relevant icon if available
+    date: "May 2024",
+  },
+  {
+    title: "AI-Powered Screenwriting App Development",
+    location: "Personal Project",
+    description:
+      "Developing a screenwriting structure application leveraging AI with Python and Next.js, aimed at automating and enhancing creative writing processes.",
+    icon: React.createElement(FaLightbulb), // Consider changing to a more relevant icon if available
+    date: "May 2024",
   },
 ] as const;
 
@@ -81,14 +87,14 @@ export const projectsData = [
     title: "Fitness Progress Tracker",
     description: 
       "Track and log fitness activities with a dynamic interface. Built with React and Ruby on Rails, styled with Tailwind CSS.",
-    tags: ["React", "Ruby on Rails", "Devise API", "Tailwind CSS", "JavaScript", "Full-Stack"],
+    tags: ["React", "Ruby on Rails", "Devise API", "Tailwind CSS", "JavaScript"],
     imageUrl: fitnessappImg
   },
   {
     title: "Colorado Mountain Bike Race Portal",
     description: 
       "A full-stack website for a mountain bike race. Integrates Flickr API for photos and uses Ruby on Rails for backend.",
-    tags: ["React", "Ruby on Rails", "Flickr API", "Tailwind CSS", "JavaScript", "Full-Stack"],
+    tags: ["React", "Ruby on Rails", "Flickr API", "Tailwind CSS", "JavaScript"],
     imageUrl: bikeraceappImg
   },
   {
@@ -110,14 +116,10 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
   "PostgreSQL",
+  "Ruby on Rails",
   "Python",
-  "Django",
   "Framer Motion",
+  "Relume",
+  "figma",
 ] as const;
