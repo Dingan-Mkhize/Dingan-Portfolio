@@ -65,6 +65,10 @@ export default function Project({
 
         group-even:right-[initial] group-even:-left-40"
         />
+        <button className="absolute top-2 right-2 bg-white/70 hover:bg-white p-1 rounded-full transition ease-in-out duration-300 shadow-lg border border-gray-300 hover:shadow-xl">
+  <span className="text-xl">🚀</span>
+</button>
+
       </section>
     </motion.div>
   );
