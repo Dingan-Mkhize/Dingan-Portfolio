@@ -5,14 +5,25 @@ import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendApiKey = process.env.RESEND_API_KEY;
+const senderEmail = process.env.SENDER_EMAIL;
+const toEmail = process.env.TO_EMAIL;
+
+if (!resendApiKey || !senderEmail || !toEmail) {
+  throw new Error("Missing required environment variables");
+}
+
+const resend = new Resend(resendApiKey);
 
 export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("senderEmail");
-  const message = formData.get("message");
+  const senderEmailFromForm = formData.get("senderEmail") as string;
+  const message = formData.get("message") as string;
 
-  // simple server-side validation
-  if (!validateString(senderEmail, 500)) {
+  console.log('Resend API Key:', resendApiKey);
+  console.log('Sender Email:', senderEmailFromForm);
+  console.log('Message:', message);
+
+  if (!validateString(senderEmailFromForm, 500)) {
     return {
       error: "Invalid sender email",
     };
@@ -26,13 +37,13 @@ export const sendEmail = async (formData: FormData) => {
   let data;
   try {
     data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "dingan.mkhize@yahoo.com",
+      from: `Contact Form <${senderEmail}>`,
+      to: toEmail,
       subject: "Message from contact form",
-      reply_to: senderEmail,
+      reply_to: senderEmailFromForm,
       react: React.createElement(ContactFormEmail, {
         message: message,
-        senderEmail: senderEmail,
+        senderEmail: senderEmailFromForm,
       }),
     });
   } catch (error: unknown) {
@@ -45,3 +56,4 @@ export const sendEmail = async (formData: FormData) => {
     data,
   };
 };
+

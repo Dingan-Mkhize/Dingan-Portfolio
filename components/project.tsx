@@ -12,6 +12,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  projectUrl
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -65,7 +66,10 @@ export default function Project({
 
         group-even:right-[initial] group-even:-left-40"
         />
-        <button className="absolute top-2 right-2 bg-white/70 hover:bg-white p-1 rounded-full transition ease-in-out duration-300 shadow-lg border border-gray-300 hover:shadow-xl">
+        <button
+  className="absolute top-2 right-2 bg-white/70 hover:bg-white p-1 rounded-full transition ease-in-out duration-300 shadow-lg border border-gray-300 hover:shadow-xl"
+  onClick={() => window.open(projectUrl, '_blank')}
+>
   <span className="text-xl">🚀</span>
 </button>
 

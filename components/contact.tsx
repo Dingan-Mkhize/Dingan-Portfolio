@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const [pending, setPending] = useState(false);
 
   return (
     <motion.section
@@ -33,22 +34,35 @@ export default function Contact() {
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          dingan.mkhize@yahoo.com
+        <a className="underline" href="mailto:sunnydao@hotmail.co.uk">
+          sunnydao@hotmail.co.uk
         </a>{" "}
         or through this form.
       </p>
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
+        onSubmit={async (event) => {
+          event.preventDefault();
+          setPending(true);
+
+          const formData = new FormData(event.target as HTMLFormElement);
+          console.log('Form Data:', {
+            senderEmail: formData.get("senderEmail"),
+            message: formData.get("message"),
+          });
+
           const { data, error } = await sendEmail(formData);
 
+          setPending(false);
+
           if (error) {
+            console.error("Error sending email:", error);
             toast.error(error);
             return;
           }
 
+          console.log("Email sent successfully:", data);
           toast.success("Email sent successfully!");
         }}
       >
@@ -67,8 +81,10 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <SubmitBtn />
+        <SubmitBtn pending={pending} />
       </form>
     </motion.section>
   );
 }
+
+
