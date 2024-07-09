@@ -25,7 +25,7 @@ export default function Experience() {
               contentStyle={{
                 background: theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
-                border: theme === "light" ? "1px solid black" : "1px solid rgba(255, 255, 255, 0.05)",
+                border: theme === "light" ? "1px solid black" : "1px solid white",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
