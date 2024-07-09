@@ -22,31 +22,11 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
-
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
-      </p>
+  My journey into the world of programming began in the most unexpected way. With a background in <span className="font-medium">screenwriting</span>, I found myself immersed in the art of storytelling and narrative. By chance, a colleague and I embarked on a quest to build an app for filmmakers. As I dabbled in <span className="font-medium">basic coding</span> to bring our vision to life, I stumbled upon a new passion that rivaled my love for storytelling: <span className="font-medium">programming</span>. Although the app didn't pan out, it sparked a new fire in me. Now, I strive to marry my two passions, using my experience in structure and narrative to create <span className="font-medium">websites that tell visual stories</span> built with <span className="font-medium">solid code</span>.
+</p>
+<p className="mb-3">
+  Now, with my extensive training as a full stack engineer through OpenClassrooms, I am revisiting the dream of creating a transformative app for screenwriters. Leveraging the power of AI, I'm developing a <span className="font-medium">script structure app</span> designed to assist my fellow screenwriters in crafting compelling narratives. This new venture combines my love for storytelling with the technical prowess I've acquired, aiming to provide an invaluable tool for the film industry.
+</p>
     </motion.section>
   );
 }
