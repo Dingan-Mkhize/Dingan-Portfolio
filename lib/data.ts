@@ -95,7 +95,7 @@ export const projectsData = [
     description: "A full-stack website for a mountain bike race. Integrates Flickr API for photos and uses Ruby on Rails for backend.",
     tags: ["React", "Ruby on Rails", "Flickr API", "Tailwind CSS", "JavaScript"],
     imageUrl: bikeraceappImg,
-    projectUrl: ""  
+    projectUrl: "https://project7-bike-race-site-production.up.railway.app"  
   },
   {
     title: "Community Volunteer Hub",
